@@ -1,5 +1,21 @@
 # Phoenix女性友善職場平台 demo repo
 
+## 快速看懂
+
+![startup-phoenix-workplace 功能截圖](docs/preview.png)
+
+- 線上 Demo：https://atlasforcn.github.io/startup-phoenix-workplace/
+- 這個原型在做什麼：把 Phoenix 做成女性友善職場評估、職缺媒合與改善追蹤平台。
+- 特色定位：特色是同時服務求職者和企業，讓職場友善指標變成可比較、可改善的資料。
+- 操作流程：篩選職缺並比較友善指標 → 送出匿名回饋或安全提醒 → 企業端追蹤制度檢核與改善任務
+
+<details>
+<summary>展開完整功能流程截圖</summary>
+
+![startup-phoenix-workplace 完整功能流程截圖](docs/flow.png)
+
+</details>
+
 這是一個可直接用瀏覽器開啟的靜態互動原型，主題為「女性友善職場評估、職缺媒合與改善追蹤平台」。原型以求職者與人資雙邊使用情境設計，包含職缺篩選、企業友善指標、匿名回饋箱、福利/制度檢核、面試安全提醒、改善任務，以及收藏與比較功能。
 
 ## 比賽與案例來源
