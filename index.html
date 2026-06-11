@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Phoenix女性友善職場平台靜態互動原型，提供職缺媒合、企業友善指標、匿名回饋與改善追蹤。">
+  <title>Phoenix女性友善職場平台 | 靜態 demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="topbar" aria-label="主要導覽">
+      <a class="brand" href="#overview" aria-label="Phoenix女性友善職場平台首頁">
+        <span class="brand-mark">P</span>
+        <span>
+          <strong>Phoenix</strong>
+          <small>女性友善職場平台</small>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a href="#jobs">職缺媒合</a>
+        <a href="#companies">企業指標</a>
+        <a href="#feedback">匿名回饋</a>
+        <a href="#improvement">改善追蹤</a>
+      </div>
+    </nav>
+
+    <section id="overview" class="hero-section">
+      <div class="hero-copy">
+        <span class="eyebrow">112 年第一梯次成功案例概念原型</span>
+        <h1>Phoenix女性友善職場平台</h1>
+        <p>
+          把求職媒合、面試安全、企業制度檢核與匿名回饋放在同一個工作台，
+          讓求職者看見更透明的職場風險，也讓企業知道下一步該改善什麼。
+        </p>
+        <div class="hero-actions" aria-label="快速操作">
+          <a class="primary-action" href="#jobs">開始找職缺</a>
+          <a class="secondary-action" href="#policy-check">檢核企業制度</a>
+        </div>
+      </div>
+      <div class="hero-panel" aria-label="平台即時概況">
+        <div class="signal-board">
+          <div class="signal-header">
+            <span>友善職場雷達</span>
+            <strong id="heroAverage">86</strong>
+          </div>
+          <div class="radar-visual" aria-hidden="true">
+            <span class="axis axis-one"></span>
+            <span class="axis axis-two"></span>
+            <span class="axis axis-three"></span>
+            <span class="radar-fill"></span>
+          </div>
+          <dl class="hero-metrics">
+            <div>
+              <dt>可比較職缺</dt>
+              <dd id="jobCount">0</dd>
+            </div>
+            <div>
+              <dt>企業改善任務</dt>
+              <dd id="taskCount">0</dd>
+            </div>
+            <div>
+              <dt>匿名回饋</dt>
+              <dd id="feedbackCount">0</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="source-strip" aria-labelledby="sourceTitle">
+      <div>
+        <p class="section-kicker" id="sourceTitle">案例來源</p>
+        <h2>大專校院創新創業實戰模擬學習平臺</h2>
+      </div>
+      <ul class="source-list">
+        <li><span>年度</span>112 年（2023）</li>
+        <li><span>屆次/階段</span>第一梯次成功案例</li>
+        <li><span>團隊/公司</span>Phoenix女性友善職場平台</li>
+        <li><span>學校</span>大同大學</li>
+        <li><span>類別</span>服務文創</li>
+        <li><span>作品名稱</span>Phoenix女性友善職場平台</li>
+        <li><span>官方來源</span><a href="https://ssp.moe.gov.tw/cases/495" target="_blank" rel="noreferrer">ssp.moe.gov.tw/cases/495</a></li>
+      </ul>
+      <p class="disclaimer">
+        免責聲明：這是依公開得獎資訊與概念自行製作的興趣原型，不是原團隊官方 demo 或產品。
+      </p>
+    </section>
+
+    <section class="workspace-grid" aria-label="平台摘要">
+      <article class="workspace-tile">
+        <span class="tile-code">01</span>
+        <h2>求職者看見安全與制度</h2>
+        <p>每個職缺都標示友善分數、申訴機制、彈性工作與面試安全提醒，降低資訊落差。</p>
+      </article>
+      <article class="workspace-tile">
+        <span class="tile-code">02</span>
+        <h2>企業知道優先改善項目</h2>
+        <p>人資可透過制度檢核與改善任務，把抽象的友善承諾變成可追蹤的行動。</p>
+      </article>
+      <article class="workspace-tile">
+        <span class="tile-code">03</span>
+        <h2>匿名經驗形成風險訊號</h2>
+        <p>回饋箱以類別、情緒與關鍵字整理職場經驗，協助求職者比較企業文化。</p>
+      </article>
+    </section>
+
+    <section id="jobs" class="app-section">
+      <div class="section-heading">
+        <p class="section-kicker">Candidate desk</p>
+        <h2>職缺媒合與求職收藏</h2>
+        <p>篩選更友善的工作條件，收藏想追蹤的職缺，並把候選工作加入比較表。</p>
+      </div>
+
+      <div class="control-surface">
+        <div class="filter-grid" aria-label="職缺篩選器">
+          <label>
+            關鍵字
+            <input id="keywordInput" type="search" placeholder="輸入職稱、公司或制度">
+          </label>
+          <label>
+            工作型態
+            <select id="workModeFilter">
+              <option value="all">全部型態</option>
+              <option value="混合辦公">混合辦公</option>
+              <option value="遠端優先">遠端優先</option>
+              <option value="固定辦公">固定辦公</option>
+            </select>
+          </label>
+          <label>
+            城市
+            <select id="cityFilter">
+              <option value="all">全部城市</option>
+              <option value="台北">台北</option>
+              <option value="新北">新北</option>
+              <option value="台中">台中</option>
+              <option value="高雄">高雄</option>
+            </select>
+          </label>
+          <label>
+            最低友善分數
+            <input id="scoreFilter" type="range" min="60" max="95" value="75">
+            <span id="scoreValue" class="range-value">75 分以上</span>
+          </label>
+        </div>
+
+        <fieldset class="tag-filter">
+          <legend>必要制度</legend>
+          <label><input type="checkbox" name="benefit" value="薪酬透明">薪酬透明</label>
+          <label><input type="checkbox" name="benefit" value="彈性工時">彈性工時</label>
+          <label><input type="checkbox" name="benefit" value="申訴保護">申訴保護</label>
+          <label><input type="checkbox" name="benefit" value="夜歸補助">夜歸補助</label>
+          <button id="resetFilters" class="ghost-button" type="button">重設篩選</button>
+        </fieldset>
+      </div>
+
+      <div class="job-toolbar">
+        <p id="jobResultText">正在整理職缺...</p>
+        <button id="clearSaved" class="text-button" type="button">清空收藏與比較</button>
+      </div>
+      <div id="jobList" class="job-list" aria-live="polite"></div>
+
+      <aside class="compare-dock" aria-label="收藏與比較">
+        <div>
+          <p class="section-kicker">Saved shortlist</p>
+          <h3>收藏與比較</h3>
+        </div>
+        <div id="savedList" class="mini-list"></div>
+        <div id="compareTable" class="compare-table"></div>
+      </aside>
+    </section>
+
+    <section id="companies" class="app-section split-section">
+      <div class="section-heading">
+        <p class="section-kicker">Employer index</p>
+        <h2>企業友善指標</h2>
+        <p>以制度、回饋與風險訊號組成企業概況，讓雙方用同一套語言討論改善。</p>
+      </div>
+
+      <div class="company-layout">
+        <div class="company-list" id="companyList" aria-label="企業列表"></div>
+        <article class="company-detail" id="companyDetail" aria-live="polite"></article>
+      </div>
+    </section>
+
+    <section id="feedback" class="app-section split-section">
+      <div class="section-heading">
+        <p class="section-kicker">Anonymous signal</p>
+        <h2>匿名回饋箱</h2>
+        <p>把職場經驗整理成可讀的訊號，讓求職者與企業端都能更早發現盲點。</p>
+      </div>
+
+      <div class="feedback-layout">
+        <form id="feedbackForm" class="form-panel">
+          <label>
+            回饋企業
+            <select id="feedbackCompany" required></select>
+          </label>
+          <label>
+            回饋類別
+            <select id="feedbackCategory" required>
+              <option value="面試安全">面試安全</option>
+              <option value="制度透明">制度透明</option>
+              <option value="主管互動">主管互動</option>
+              <option value="申訴經驗">申訴經驗</option>
+            </select>
+          </label>
+          <label>
+            安心程度
+            <input id="feedbackRating" type="range" min="1" max="5" value="4">
+            <span id="ratingValue" class="range-value">4 / 5</span>
+          </label>
+          <label>
+            匿名內容
+            <textarea id="feedbackText" rows="5" maxlength="160" placeholder="例如：面試前有收到完整流程與聯絡窗口，離場交通也有提醒。"></textarea>
+          </label>
+          <button class="primary-action" type="submit">送出匿名回饋</button>
+          <p class="form-note">Demo 僅儲存在此瀏覽器，不會送到伺服器。</p>
+        </form>
+
+        <div class="feedback-feed">
+          <div class="feedback-stats" id="feedbackStats"></div>
+          <div id="feedbackList" class="feedback-list" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="policy-check" class="app-section">
+      <div class="section-heading">
+        <p class="section-kicker">Policy audit</p>
+        <h2>福利與制度檢核</h2>
+        <p>人資可以快速盤點目前制度，取得友善成熟度分數與下一步建議。</p>
+      </div>
+
+      <div class="audit-layout">
+        <form id="policyForm" class="check-panel">
+          <label><input type="checkbox" value="薪酬級距公開" data-weight="16">薪酬級距公開並在職缺頁揭露</label>
+          <label><input type="checkbox" value="反騷擾申訴 SOP" data-weight="18">反騷擾申訴 SOP 有明確時程與保護措施</label>
+          <label><input type="checkbox" value="彈性工時與遠端" data-weight="14">提供彈性工時、遠端或混合辦公安排</label>
+          <label><input type="checkbox" value="育兒與照顧支持" data-weight="13">育兒、照顧者或家庭照護支持制度</label>
+          <label><input type="checkbox" value="夜間交通安全" data-weight="12">夜間面試、加班或外勤有交通安全支援</label>
+          <label><input type="checkbox" value="匿名回饋機制" data-weight="13">匿名回饋機制與追蹤回覆節點</label>
+          <label><input type="checkbox" value="主管友善訓練" data-weight="14">主管完成性別友善與創傷知情溝通訓練</label>
+        </form>
+        <aside class="audit-result" id="policyResult" aria-live="polite"></aside>
+      </div>
+    </section>
+
+    <section id="interview" class="app-section split-section">
+      <div class="section-heading">
+        <p class="section-kicker">Interview safety</p>
+        <h2>面試安全提醒</h2>
+        <p>依照面試時間、地點與職缺風險，自動整理面試前後要確認的安全事項。</p>
+      </div>
+
+      <div class="interview-layout">
+        <form id="interviewForm" class="form-panel">
+          <label>
+            選擇職缺
+            <select id="interviewJob"></select>
+          </label>
+          <label>
+            面試日期
+            <input id="interviewDate" type="date">
+          </label>
+          <label>
+            面試時間
+            <input id="interviewTime" type="time" value="18:30">
+          </label>
+          <label>
+            面試地點
+            <input id="interviewPlace" type="text" placeholder="例如：台北市信義區共享辦公室">
+          </label>
+          <label class="inline-check">
+            <input id="lateInterview" type="checkbox">
+            晚間或需單獨前往
+          </label>
+          <button class="primary-action" type="submit">產生提醒</button>
+        </form>
+        <aside class="safety-card" id="safetyResult" aria-live="polite"></aside>
+      </div>
+    </section>
+
+    <section id="improvement" class="app-section">
+      <div class="section-heading">
+        <p class="section-kicker">HR action board</p>
+        <h2>改善任務追蹤</h2>
+        <p>把企業端承諾拆成任務，追蹤負責人、期限與完成狀態。</p>
+      </div>
+
+      <div class="task-layout">
+        <form id="taskForm" class="task-form">
+          <label>
+            任務名稱
+            <input id="taskTitle" type="text" maxlength="40" placeholder="例如：建立夜間面試交通補助規則">
+          </label>
+          <label>
+            負責單位
+            <select id="taskOwner">
+              <option value="人資">人資</option>
+              <option value="法務">法務</option>
+              <option value="主管群">主管群</option>
+              <option value="營運">營運</option>
+            </select>
+          </label>
+          <label>
+            期限
+            <input id="taskDue" type="date">
+          </label>
+          <button class="primary-action" type="submit">新增任務</button>
+        </form>
+
+        <div class="task-board">
+          <div class="progress-card">
+            <span>改善完成率</span>
+            <strong id="taskProgressText">0%</strong>
+            <div class="progress-track"><span id="taskProgressBar"></span></div>
+          </div>
+          <div id="taskList" class="task-list" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Phoenix女性友善職場平台 demo repo</p>
+    <p>依公開得獎資訊與概念自行製作，非原團隊官方 demo 或產品。</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
