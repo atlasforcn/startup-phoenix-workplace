@@ -8,6 +8,40 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- repo-snapshot:start -->
+    <section class="repo-snapshot repo-snapshot--dashboard" aria-label="專案辨識預覽：Phoenix" style="--snap-bg: #fbf0ee; --snap-bg-2: #e9e9f0; --snap-ink: #2b2529; --snap-muted: #6d646c; --snap-accent: #d9504f; --snap-accent-2: #2f86a6;">
+      <div class="snapshot-copy">
+        <p class="snapshot-kicker">Inclusive workplace map</p>
+        <div class="snapshot-name">Phoenix</div>
+        <p class="snapshot-tagline">女性友善職場、政策檢核與職涯支持，用清楚的職場路徑取代一般介紹頁。</p>
+        <div class="snapshot-chips" aria-label="核心辨識元素">
+        <span>職場檢核</span>
+        <span>政策資源</span>
+        <span>職涯支持</span>
+        </div>
+      </div>
+      <div class="snapshot-scene" aria-hidden="true">
+        <div class="snapshot-device">
+          <div class="snapshot-device-head">
+            <span>Workplace index</span>
+            <strong>彈性工時政策上線</strong>
+          </div>
+          <div class="snapshot-visual snapshot-visual--dashboard">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="snapshot-data-row">
+          <span><b>84</b>友善分</span>
+          <span><b>7</b>政策</span>
+          <span><b>18</b>職缺</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- repo-snapshot:end -->
+    <div class="demo-boundary" role="note">
+      <strong>Prototype</strong>
+      <span>靜態互動原型；畫面資料、評分、AI、金流、醫療、法律與安全流程皆為示範，不代表原團隊官方產品或實際服務。</span>
+    </div>
   <header class="site-header">
     <nav class="topbar" aria-label="主要導覽">
       <a class="brand" href="#overview" aria-label="Phoenix女性友善職場平台首頁">
@@ -17,12 +51,15 @@
           <small>女性友善職場平台</small>
         </span>
       </a>
-      <div class="nav-links">
-        <a href="#jobs">職缺媒合</a>
-        <a href="#companies">企業指標</a>
-        <a href="#feedback">匿名回饋</a>
-        <a href="#improvement">改善追蹤</a>
-      </div>
+      <details class="nav-links nav-disclosure">
+        <summary>導覽</summary>
+        <div class="nav-menu">
+          <a href="#jobs">職缺媒合</a>
+          <a href="#companies">企業指標</a>
+          <a href="#feedback">匿名回饋</a>
+          <a href="#improvement">改善追蹤</a>
+        </div>
+      </details>
     </nav>
 
     <section id="overview" class="hero-section">
@@ -70,24 +107,26 @@
   </header>
 
   <main>
-    <section class="source-strip" aria-labelledby="sourceTitle">
-      <div>
-        <p class="section-kicker" id="sourceTitle">案例來源</p>
-        <h2>大專校院創新創業實戰模擬學習平臺</h2>
+    <details class="source-strip source-disclosure" aria-labelledby="sourceTitle">
+      <summary>
+        <span class="section-kicker">案例來源</span>
+        <strong id="sourceTitle">大專校院創新創業實戰模擬學習平臺</strong>
+      </summary>
+      <div class="source-body">
+        <ul class="source-list">
+          <li><span>年度</span>112 年（2023）</li>
+          <li><span>屆次/階段</span>第一梯次成功案例</li>
+          <li><span>團隊/公司</span>Phoenix女性友善職場平台</li>
+          <li><span>學校</span>大同大學</li>
+          <li><span>類別</span>服務文創</li>
+          <li><span>作品名稱</span>Phoenix女性友善職場平台</li>
+          <li><span>官方來源</span><a href="https://ssp.moe.gov.tw/cases/495" target="_blank" rel="noreferrer">ssp.moe.gov.tw/cases/495</a></li>
+        </ul>
+        <p class="disclaimer">
+          免責聲明：這是依公開得獎資訊與概念自行製作的興趣原型，不是原團隊官方 demo 或產品。
+        </p>
       </div>
-      <ul class="source-list">
-        <li><span>年度</span>112 年（2023）</li>
-        <li><span>屆次/階段</span>第一梯次成功案例</li>
-        <li><span>團隊/公司</span>Phoenix女性友善職場平台</li>
-        <li><span>學校</span>大同大學</li>
-        <li><span>類別</span>服務文創</li>
-        <li><span>作品名稱</span>Phoenix女性友善職場平台</li>
-        <li><span>官方來源</span><a href="https://ssp.moe.gov.tw/cases/495" target="_blank" rel="noreferrer">ssp.moe.gov.tw/cases/495</a></li>
-      </ul>
-      <p class="disclaimer">
-        免責聲明：這是依公開得獎資訊與概念自行製作的興趣原型，不是原團隊官方 demo 或產品。
-      </p>
-    </section>
+    </details>
 
     <section class="workspace-grid" aria-label="平台摘要">
       <article class="workspace-tile">
